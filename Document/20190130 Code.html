@@ -1,0 +1,2674 @@
+﻿<html><head><meta charset="UTF-8"><title>コード検索のプログラム</title></head>
+
+<body background="../Image/background/back3.png"bgproperties="fixed">
+
+<font size="2"><font color="white">
+
+Option Explicit<br>
+<br>
+'コードの音階を数値化する代数<br>
+Dim codeA As Integer<br>
+Dim codeB As Integer<br>
+Dim codeC As Integer<br>
+Dim codeD As Integer<br>
+Dim codeE As Integer<br>
+Dim codeF As Integer<br>
+<br>
+'鍵盤（入力）とスクリーン（出力）の同期<br>
+Sub C1()<br>
+<br>
+'数値の定義<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+'もし既に赤かったら（ONの状態になっていたら）<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+<br>
+'ONをOFFにする<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 1).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 1).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ 'それ以外（OFFの状態なら）<br>
+ Else<br>
+ <br>
+ 'OFFをONにする<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 1).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 1).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Ca1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 3).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 3).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub D1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 6).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 4).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 6).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 4).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Da1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 6).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 6).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub E1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 8).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 7).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 8).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 7).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub F1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 10).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 10).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 10).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 10).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Fa1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 12).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 12).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub G1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 15).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 13).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 15).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 13).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Ga1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 15).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 15).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub A1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 18).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 16).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 18).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 16).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Aa1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 18).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 18).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+<br>
+Sub B1()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 20).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 19).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 20).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 19).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub C2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 22).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 22).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 22).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 22).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Ca2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 24).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 24).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub D2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 27).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 25).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 27).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 25).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Da2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 27).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 27).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub E2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 29).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 28).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 29).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 28).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub F2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 31).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 31).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 31).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 31).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Fa2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 33).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 33).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+<br>
+Sub G2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 36).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 34).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 36).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 34).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Ga2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 36).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 36).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub A2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 39).Interior.ColorIndex = Null<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+ <br>
+ Cells(b + 7, C + 37).Interior.ColorIndex = Null<br>
+ <br>
+ Next C<br>
+ Next b<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ <br>
+ Cells(a + 1, 39).Interior.ColorIndex = 3<br>
+ <br>
+ Next a<br>
+ <br>
+ For b = 1 To 4 Step 1<br>
+ For C = 1 To 3 Step 1<br>
+<br>
+ Cells(b + 7, C + 37).Interior.ColorIndex = 3<br>
+<br>
+ Next C<br>
+ Next b<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+Sub Aa2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 39).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 39).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub B2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 41).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 40).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 41).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 40).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+Sub C3()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 10 Step 1<br>
+ For b = 1 To 3 Step 1<br>
+ <br>
+ Cells(a + 1, b + 43).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 10 Step 1<br>
+ For b = 1 To 3 Step 1<br>
+ <br>
+ Cells(a + 1, b + 43).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+End If<br>
+ <br>
+End Sub<br>
+<br>
+'2つ目のショートカットキーの割り当て先<br>
+Sub sC2()<br>
+<br>
+Dim a As Integer<br>
+Dim b As Integer<br>
+Dim C As Integer<br>
+Dim D As Integer<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+<br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 22).Interior.ColorIndex = Null<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+ <br>
+ Cells(C + 7, D + 22).Interior.ColorIndex = Null<br>
+ <br>
+ Next D<br>
+ Next C<br>
+ <br>
+ Else<br>
+ <br>
+ For a = 1 To 6 Step 1<br>
+ For b = 1 To 2 Step 1<br>
+ <br>
+ Cells(a + 1, b + 22).Interior.ColorIndex = 3<br>
+ <br>
+ Next b<br>
+ Next a<br>
+ <br>
+ For C = 1 To 4 Step 1<br>
+ For D = 1 To 3 Step 1<br>
+<br>
+ Cells(C + 7, D + 22).Interior.ColorIndex = 3<br>
+<br>
+ Next D<br>
+ Next C<br>
+ <br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'「鍵盤に変換」ボタンのプログラム<br>
+Sub 鍵盤変換()<br>
+<br>
+'未入力がないかの確認<br>
+Dim a As String<br>
+a = Cells(13, 48).Value<br>
+<br>
+If a = &quot;根音？&quot; Then<br>
+MsgBox (&quot;根音を選んでください&quot;)<br>
+Exit Sub<br>
+ElseIf a = &quot;コード？&quot; Then<br>
+MsgBox (&quot;コードを選んでください&quot;)<br>
+Exit Sub<br>
+<br>
+Else<br>
+<br>
+'いろいろ呼び出して実行<br>
+Call 鍵盤初期化<br>
+Call 代数初期化<br>
+Call 根音数値化<br>
+Call コード数値化<br>
+Call 出力A<br>
+Call 出力B<br>
+Call 出力C<br>
+Call 出力D<br>
+Call memory<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'「鍵盤色消し」ボタンのプログラム<br>
+Sub 鍵盤色消し()<br>
+<br>
+Call 鍵盤初期化<br>
+Call 代数初期化<br>
+Call memory<br>
+<br>
+End Sub<br>
+<br>
+'出力画面をすべてNull色にするプログラム<br>
+Sub 鍵盤初期化()<br>
+<br>
+'Null色ならそのまま、赤色だったらNull色にする<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+Call C1<br>
+End If<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+Call Ca1<br>
+End If<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+Call D1<br>
+End If<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+Call Da1<br>
+End If<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+Call E1<br>
+End If<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+Call F1<br>
+End If<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+Call Fa1<br>
+End If<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+Call G1<br>
+End If<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+Call Ga1<br>
+End If<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+Call A1<br>
+End If<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+Call Aa1<br>
+End If<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+Call B1<br>
+End If<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+Call C2<br>
+End If<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+Call Ca2<br>
+End If<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+Call D2<br>
+End If<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+Call Da2<br>
+End If<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+Call E2<br>
+End If<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+Call F2<br>
+End If<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+Call Fa2<br>
+End If<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+Call G2<br>
+End If<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+Call Ga2<br>
+End If<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+Call A2<br>
+End If<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+Call Aa2<br>
+End If<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+Call B2<br>
+End If<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+Call C3<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'代数の初期化<br>
+Sub 代数初期化()<br>
+<br>
+codeA = 0<br>
+codeB = 0<br>
+codeC = 0<br>
+codeD = 0<br>
+<br>
+End Sub<br>
+<br>
+'根音を数値化するプログラム<br>
+Sub 根音数値化()<br>
+<br>
+Dim a As String<br>
+a = Cells(9, 48).Value<br>
+<br>
+'数値化していく<br>
+If a = &quot;C&quot; Then<br>
+codeA = 1<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;C#&quot; Or a = &quot;D♭&quot; Then<br>
+codeA = 2<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;D&quot; Then<br>
+codeA = 3<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;D#&quot; Or a = &quot;E♭&quot; Then<br>
+codeA = 4<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;E&quot; Then<br>
+codeA = 5<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;F&quot; Then<br>
+codeA = 6<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;F#&quot; Or a = &quot;G♭&quot; Then<br>
+codeA = 7<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;G&quot; Then<br>
+codeA = 8<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;G#&quot; Or a = &quot;A♭&quot; Then<br>
+codeA = 9<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;A&quot; Then<br>
+codeA = 10<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;A#&quot; Or a = &quot;B♭&quot; Then<br>
+codeA = 11<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;B&quot; Then<br>
+codeA = 12<br>
+Exit Sub<br>
+<br>
+Else<br>
+MsgBox (&quot;ちゃんと選択肢から選べよ！！バーカ！！&quot;)<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'コードにより2つ目以降の音を数値化する<br>
+Sub コード数値化()<br>
+<br>
+Dim a As String<br>
+a = Cells(11, 48).Value<br>
+<br>
+'数値化していく<br>
+If a = &quot;major&quot; Then<br>
+codeB = codeA + 4<br>
+codeC = codeA + 7<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;6&quot; Then<br>
+codeB = codeA + 4<br>
+codeC = codeA + 7<br>
+codeD = codeA + 9<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;7&quot; Then<br>
+codeB = codeA + 4<br>
+codeC = codeA + 7<br>
+codeD = codeA + 10<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;maj7&quot; Then<br>
+codeB = codeA + 4<br>
+codeC = codeA + 7<br>
+codeD = codeA + 11<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;9&quot; Then<br>
+codeB = codeA + 2<br>
+codeC = codeA + 7<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;m&quot; Then<br>
+codeB = codeA + 3<br>
+codeC = codeA + 7<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;m7&quot; Then<br>
+codeB = codeA + 3<br>
+codeC = codeA + 7<br>
+codeD = codeA + 10<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;m7(-5)&quot; Then<br>
+codeB = codeA + 3<br>
+codeC = codeA + 6<br>
+codeD = codeA + 10<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;dim&quot; Then<br>
+codeB = codeA + 3<br>
+codeC = codeA + 6<br>
+codeD = codeA + 9<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;7sus4&quot; Then<br>
+codeB = codeA + 5<br>
+codeC = codeA + 7<br>
+codeD = codeA + 10<br>
+Exit Sub<br>
+<br>
+ElseIf a = &quot;aug&quot; Then<br>
+codeB = codeA + 4<br>
+codeC = codeA + 8<br>
+Exit Sub<br>
+<br>
+Else<br>
+MsgBox (&quot;ちゃんと選択肢から選べよ！！バーカ！！&quot;)<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'codeAの音を出力する<br>
+Sub 出力A()<br>
+<br>
+Dim a As Integer<br>
+a = codeA<br>
+<br>
+If a = 1 Then<br>
+Call C1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 2 Then<br>
+Call Ca1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 3 Then<br>
+Call D1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 4 Then<br>
+Call Da1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 5 Then<br>
+Call E1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 6 Then<br>
+Call F1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 7 Then<br>
+Call Fa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 8 Then<br>
+Call G1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 9 Then<br>
+Call Ga1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 10 Then<br>
+Call A1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 11 Then<br>
+Call Aa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 12 Then<br>
+Call B1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 13 Then<br>
+Call C2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 14 Then<br>
+Call Ca2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 15 Then<br>
+Call D2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 16 Then<br>
+Call Da2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 17 Then<br>
+Call E2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 18 Then<br>
+Call F2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 19 Then<br>
+Call Fa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 20 Then<br>
+Call G2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 21 Then<br>
+Call Ga2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 22 Then<br>
+Call A2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 23 Then<br>
+Call Aa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 24 Then<br>
+Call B2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 25 Then<br>
+Call C3<br>
+Exit Sub<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'codeBの音を出力する<br>
+Sub 出力B()<br>
+<br>
+Dim a As Integer<br>
+a = codeB<br>
+<br>
+If a = 1 Then<br>
+Call C1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 2 Then<br>
+Call Ca1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 3 Then<br>
+Call D1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 4 Then<br>
+Call Da1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 5 Then<br>
+Call E1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 6 Then<br>
+Call F1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 7 Then<br>
+Call Fa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 8 Then<br>
+Call G1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 9 Then<br>
+Call Ga1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 10 Then<br>
+Call A1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 11 Then<br>
+Call Aa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 12 Then<br>
+Call B1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 13 Then<br>
+Call C2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 14 Then<br>
+Call Ca2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 15 Then<br>
+Call D2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 16 Then<br>
+Call Da2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 17 Then<br>
+Call E2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 18 Then<br>
+Call F2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 19 Then<br>
+Call Fa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 20 Then<br>
+Call G2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 21 Then<br>
+Call Ga2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 22 Then<br>
+Call A2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 23 Then<br>
+Call Aa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 24 Then<br>
+Call B2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 25 Then<br>
+Call C3<br>
+Exit Sub<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'codeCの音を出力する<br>
+Sub 出力C()<br>
+<br>
+Dim a As Integer<br>
+a = codeC<br>
+<br>
+If a = 1 Then<br>
+Call C1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 2 Then<br>
+Call Ca1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 3 Then<br>
+Call D1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 4 Then<br>
+Call Da1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 5 Then<br>
+Call E1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 6 Then<br>
+Call F1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 7 Then<br>
+Call Fa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 8 Then<br>
+Call G1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 9 Then<br>
+Call Ga1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 10 Then<br>
+Call A1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 11 Then<br>
+Call Aa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 12 Then<br>
+Call B1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 13 Then<br>
+Call C2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 14 Then<br>
+Call Ca2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 15 Then<br>
+Call D2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 16 Then<br>
+Call Da2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 17 Then<br>
+Call E2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 18 Then<br>
+Call F2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 19 Then<br>
+Call Fa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 20 Then<br>
+Call G2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 21 Then<br>
+Call Ga2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 22 Then<br>
+Call A2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 23 Then<br>
+Call Aa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 24 Then<br>
+Call B2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 25 Then<br>
+Call C3<br>
+Exit Sub<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'codeDの音を出力する<br>
+Sub 出力D()<br>
+<br>
+Dim a As Integer<br>
+a = codeD<br>
+<br>
+If a = 0 Then<br>
+Exit Sub<br>
+<br>
+ElseIf a = 1 Then<br>
+Call C1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 2 Then<br>
+Call Ca1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 3 Then<br>
+Call D1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 4 Then<br>
+Call Da1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 5 Then<br>
+Call E1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 6 Then<br>
+Call F1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 7 Then<br>
+Call Fa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 8 Then<br>
+Call G1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 9 Then<br>
+Call Ga1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 10 Then<br>
+Call A1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 11 Then<br>
+Call Aa1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 12 Then<br>
+Call B1<br>
+Exit Sub<br>
+<br>
+ElseIf a = 13 Then<br>
+Call C2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 14 Then<br>
+Call Ca2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 15 Then<br>
+Call D2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 16 Then<br>
+Call Da2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 17 Then<br>
+Call E2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 18 Then<br>
+Call F2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 19 Then<br>
+Call Fa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 20 Then<br>
+Call G2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 21 Then<br>
+Call Ga2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 22 Then<br>
+Call A2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 23 Then<br>
+Call Aa2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 24 Then<br>
+Call B2<br>
+Exit Sub<br>
+<br>
+ElseIf a = 25 Then<br>
+Call C3<br>
+Exit Sub<br>
+<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'鍵盤からコードに変換するプログラム<br>
+Sub コード変換()<br>
+<br>
+Call 代数初期化<br>
+Call keyboardA<br>
+Call keyboardB<br>
+Call keyboardC<br>
+Call keyboardD<br>
+Call 出力A<br>
+Call 出力B<br>
+Call 出力C<br>
+Call 出力D<br>
+Call 根音代入<br>
+Call コード特定<br>
+Call memory<br>
+<br>
+End Sub<br>
+<br>
+'音Aの数値化<br>
+Sub keyboardA()<br>
+<br>
+'音の検索<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+codeA = 1<br>
+Call C1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+codeA = 2<br>
+Call Ca1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+codeA = 3<br>
+Call D1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+codeA = 4<br>
+Call Da1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+codeA = 5<br>
+Call E1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+codeA = 6<br>
+Call F1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+codeA = 7<br>
+Call Fa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+codeA = 8<br>
+Call G1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+codeA = 9<br>
+Call Ga1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+codeA = 10<br>
+Call A1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+codeA = 11<br>
+Call Aa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+codeA = 12<br>
+Call B1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+codeA = 13<br>
+Call C2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+codeA = 14<br>
+Call Ca2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+codeA = 15<br>
+Call D2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+codeA = 16<br>
+Call Da2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+codeA = 17<br>
+Call E2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+codeA = 18<br>
+Call F2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+codeA = 19<br>
+Call Fa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+codeA = 20<br>
+Call G2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+codeA = 21<br>
+Call Ga2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+codeA = 22<br>
+Call A2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+codeA = 23<br>
+Call Aa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+codeA = 24<br>
+Call B2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+codeA = 25<br>
+Call C3<br>
+Exit Sub<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'音Bの数値化<br>
+Sub keyboardB()<br>
+<br>
+'音の検索<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+codeB = 1<br>
+Call C1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+codeB = 2<br>
+Call Ca1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+codeB = 3<br>
+Call D1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+codeB = 4<br>
+Call Da1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+codeB = 5<br>
+Call E1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+codeB = 6<br>
+Call F1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+codeB = 7<br>
+Call Fa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+codeB = 8<br>
+Call G1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+codeB = 9<br>
+Call Ga1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+codeB = 10<br>
+Call A1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+codeB = 11<br>
+Call Aa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+codeB = 12<br>
+Call B1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+codeB = 13<br>
+Call C2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+codeB = 14<br>
+Call Ca2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+codeB = 15<br>
+Call D2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+codeB = 16<br>
+Call Da2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+codeB = 17<br>
+Call E2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+codeB = 18<br>
+Call F2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+codeB = 19<br>
+Call Fa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+codeB = 20<br>
+Call G2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+codeB = 21<br>
+Call Ga2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+codeB = 22<br>
+Call A2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+codeB = 23<br>
+Call Aa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+codeB = 24<br>
+Call B2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+codeB = 25<br>
+Call C3<br>
+Exit Sub<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'音Cの数値化<br>
+Sub keyboardC()<br>
+<br>
+'音の検索<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+codeC = 1<br>
+Call C1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+codeC = 2<br>
+Call Ca1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+codeC = 3<br>
+Call D1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+codeC = 4<br>
+Call Da1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+codeC = 5<br>
+Call E1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+codeC = 6<br>
+Call F1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+codeC = 7<br>
+Call Fa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+codeC = 8<br>
+Call G1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+codeC = 9<br>
+Call Ga1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+codeC = 10<br>
+Call A1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+codeC = 11<br>
+Call Aa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+codeC = 12<br>
+Call B1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+codeC = 13<br>
+Call C2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+codeC = 14<br>
+Call Ca2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+codeC = 15<br>
+Call D2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+codeC = 16<br>
+Call Da2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+codeC = 17<br>
+Call E2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+codeC = 18<br>
+Call F2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+codeC = 19<br>
+Call Fa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+codeC = 20<br>
+Call G2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+codeC = 21<br>
+Call Ga2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+codeC = 22<br>
+Call A2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+codeC = 23<br>
+Call Aa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+codeC = 24<br>
+Call B2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+codeC = 25<br>
+Call C3<br>
+Exit Sub<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'音Dの数値化<br>
+Sub keyboardD()<br>
+<br>
+'音の検索<br>
+If Cells(2, 2).Interior.ColorIndex = 3 Then<br>
+codeD = 1<br>
+Call C1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 4).Interior.ColorIndex = 3 Then<br>
+codeD = 2<br>
+Call Ca1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 6).Interior.ColorIndex = 3 Then<br>
+codeD = 3<br>
+Call D1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 7).Interior.ColorIndex = 3 Then<br>
+codeD = 4<br>
+Call Da1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 9).Interior.ColorIndex = 3 Then<br>
+codeD = 5<br>
+Call E1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 11).Interior.ColorIndex = 3 Then<br>
+codeD = 6<br>
+Call F1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 13).Interior.ColorIndex = 3 Then<br>
+codeD = 7<br>
+Call Fa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 15).Interior.ColorIndex = 3 Then<br>
+codeD = 8<br>
+Call G1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 16).Interior.ColorIndex = 3 Then<br>
+codeD = 9<br>
+Call Ga1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 18).Interior.ColorIndex = 3 Then<br>
+codeD = 10<br>
+Call A1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 19).Interior.ColorIndex = 3 Then<br>
+codeD = 11<br>
+Call Aa1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 21).Interior.ColorIndex = 3 Then<br>
+codeD = 12<br>
+Call B1<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 23).Interior.ColorIndex = 3 Then<br>
+codeD = 13<br>
+Call C2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 25).Interior.ColorIndex = 3 Then<br>
+codeD = 14<br>
+Call Ca2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 27).Interior.ColorIndex = 3 Then<br>
+codeD = 15<br>
+Call D2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 28).Interior.ColorIndex = 3 Then<br>
+codeD = 16<br>
+Call Da2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 30).Interior.ColorIndex = 3 Then<br>
+codeD = 17<br>
+Call E2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 32).Interior.ColorIndex = 3 Then<br>
+codeD = 18<br>
+Call F2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 34).Interior.ColorIndex = 3 Then<br>
+codeD = 19<br>
+Call Fa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 36).Interior.ColorIndex = 3 Then<br>
+codeD = 20<br>
+Call G2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 37).Interior.ColorIndex = 3 Then<br>
+codeD = 21<br>
+Call Ga2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 39).Interior.ColorIndex = 3 Then<br>
+codeD = 22<br>
+Call A2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 40).Interior.ColorIndex = 3 Then<br>
+codeD = 23<br>
+Call Aa2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 42).Interior.ColorIndex = 3 Then<br>
+codeD = 24<br>
+Call B2<br>
+Exit Sub<br>
+End If<br>
+<br>
+If Cells(2, 44).Interior.ColorIndex = 3 Then<br>
+codeD = 25<br>
+Call C3<br>
+Exit Sub<br>
+End If<br>
+<br>
+End Sub<br>
+<br>
+'根音を検索してセルにぶち込む<br>
+Sub 根音代入()<br>
+<br>
+Dim a As String<br>
+Dim b As String<br>
+b = Cells(6, 50).Value<br>
+<br>
+If b = &quot;♭&quot; Or b = &quot;#&quot; Then<br>
+<br>
+ If codeA = 1 Then<br>
+ a = &quot;C&quot;<br>
+ <br>
+ ElseIf codeA = 2 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;C#&quot;<br>
+  Else<br>
+  a = &quot;D♭&quot;<br>
+  End If<br>
+  <br>
+ ElseIf codeA = 3 Then<br>
+ a = &quot;D&quot;<br>
+<br>
+ ElseIf codeA = 4 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;D#&quot;<br>
+  Else<br>
+  a = &quot;E♭&quot;<br>
+  End If<br>
+  <br>
+ ElseIf codeA = 5 Then<br>
+ a = &quot;E&quot;<br>
+<br>
+ ElseIf codeA = 6 Then<br>
+ a = &quot;F&quot;<br>
+<br>
+ ElseIf codeA = 7 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;F#&quot;<br>
+  Else<br>
+  a = &quot;G♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 8 Then<br>
+ a = &quot;G&quot;<br>
+<br>
+ ElseIf codeA = 9 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;G#&quot;<br>
+  Else<br>
+  a = &quot;A♭&quot;<br>
+  End If<br>
+<br>
+ ElseIf codeA = 10 Then<br>
+ a = &quot;A&quot;<br>
+<br>
+ ElseIf codeA = 11 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;A#&quot;<br>
+  Else<br>
+  a = &quot;B♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 12 Then<br>
+ a = &quot;B&quot;<br>
+<br>
+ ElseIf codeA = 13 Then<br>
+ a = &quot;C&quot;<br>
+<br>
+ ElseIf codeA = 14 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;C#&quot;<br>
+  Else<br>
+  a = &quot;D♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 15 Then<br>
+ a = &quot;D&quot;<br>
+<br>
+ ElseIf codeA = 16 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;D#&quot;<br>
+  Else<br>
+  a = &quot;E♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 17 Then<br>
+ a = &quot;E&quot;<br>
+<br>
+ ElseIf codeA = 18 Then<br>
+ a = &quot;F&quot;<br>
+<br>
+ ElseIf codeA = 19 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;F#&quot;<br>
+  Else<br>
+  a = &quot;G♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 20 Then<br>
+ a = &quot;G&quot;<br>
+<br>
+ ElseIf codeA = 21 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;G#&quot;<br>
+  Else<br>
+  a = &quot;A♭&quot;<br>
+  End If<br>
+<br>
+ ElseIf codeA = 22 Then<br>
+ a = &quot;A&quot;<br>
+<br>
+ ElseIf codeA = 23 Then<br>
+  If b = &quot;#&quot; Then<br>
+  a = &quot;A#&quot;<br>
+  Else<br>
+  a = &quot;B♭&quot;<br>
+  End If<br>
+ <br>
+ ElseIf codeA = 24 Then<br>
+ a = &quot;B&quot;<br>
+<br>
+ ElseIf codeA = 25 Then<br>
+ a = &quot;C&quot;<br>
+<br>
+End If<br>
+<br>
+Else<br>
+MsgBox (&quot;♭か♯かを選んでください&quot;)<br>
+<br>
+End If<br>
+<br>
+Cells(11, 50).Value = a<br>
+<br>
+End Sub<br>
+<br>
+'根音との相対的位置からコードを特定するプログラム<br>
+Sub コード特定()<br>
+<br>
+Dim a As String<br>
+<br>
+If Cells(6, 50).Value = &quot;♭&quot; Or Cells(6, 50).Value = &quot;#&quot; Then<br>
+<br>
+If codeA + 2 = codeB Then<br>
+<br>
+ If codeA + 7 = codeC Then<br>
+ <br>
+  '9の条件<br>
+  If codeD = 0 Then<br>
+  a = &quot;9&quot;<br>
+  <br>
+  End If<br>
+  <br>
+ End If<br>
+<br>
+ElseIf codeA + 3 = codeB Then<br>
+<br>
+ If codeA + 6 = codeC Then<br>
+ <br>
+  'dimの条件<br>
+  If codeA + 9 = codeD Then<br>
+  a = &quot;dim&quot;<br>
+  <br>
+  'm7(-5)の条件<br>
+  ElseIf codeA + 10 = codeD Then<br>
+  a = &quot;m7(-5)&quot;<br>
+  <br>
+  End If<br>
+  <br>
+ ElseIf codeA + 7 = codeC Then<br>
+  <br>
+  'mの条件<br>
+  If codeD = 0 Then<br>
+  a = &quot;m&quot;<br>
+  <br>
+  'm7の条件<br>
+  ElseIf codeA + 10 = codeD Then<br>
+  a = &quot;m7&quot;<br>
+  <br>
+  End If<br>
+ <br>
+ End If<br>
+<br>
+ElseIf codeA + 4 = codeB Then<br>
+<br>
+ If codeA + 7 = codeC Then<br>
+ <br>
+  'majorの条件<br>
+  If codeD = 0 Then<br>
+  a = &quot;major&quot;<br>
+  <br>
+  '6の条件<br>
+  ElseIf codeA + 9 = codeD Then<br>
+  a = &quot;6&quot;<br>
+  <br>
+  '7の条件<br>
+  ElseIf codeA + 10 = codeD Then<br>
+  a = &quot;7&quot;<br>
+<br>
+  'major7の条件<br>
+  ElseIf codeA + 11 = codeD Then<br>
+  a = &quot;maj7&quot;<br>
+  <br>
+  End If<br>
+ <br>
+ ElseIf codeA + 8 = codeC Then<br>
+ <br>
+  If codeD = 0 Then<br>
+  a = &quot;aug&quot;<br>
+  <br>
+  End If<br>
+  <br>
+ End If<br>
+ <br>
+ElseIf codeA + 5 = codeB Then<br>
+<br>
+ If codeA + 7 = codeC Then<br>
+ <br>
+  '7sus4の条件<br>
+  If codeA + 10 = codeD Then<br>
+  a = &quot;7sus4&quot;<br>
+  <br>
+  End If<br>
+  <br>
+ End If<br>
+<br>
+End If<br>
+<br>
+End If<br>
+<br>
+Cells(12, 50).Value = a<br>
+<br>
+End Sub<br>
+<br>
+'memoryに表示するプログラム<br>
+Sub memory()<br>
+<br>
+Cells(2, 48).Value = codeA<br>
+Cells(3, 48).Value = codeB<br>
+Cells(4, 48).Value = codeC<br>
+Cells(5, 48).Value = codeD<br>
+<br>
+End Sub<br>
+<br>
+'「鍵盤に変換」の記入欄を空欄にする<br>
+Sub 鍵盤del()<br>
+<br>
+Cells(9, 48).Value = Null<br>
+Cells(11, 48).Value = Null<br>
+<br>
+End Sub<br>
+<br>
+'「コードに変換」の記入欄を空欄にする<br>
+Sub コードdel()<br>
+<br>
+Cells(6, 50).Value = Null<br>
+Cells(11, 50).Value = Null<br>
+Cells(12, 50).Value = Null<br>
+<br>
+End Sub<br>
+
+<iframe allowtransparency="true"src="rink.html"frameborder="0"width="100%"heigth="100">
+サンプル
+</iframe>
+
+</body></html>
